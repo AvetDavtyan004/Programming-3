@@ -45,7 +45,7 @@ class Cat
 }
 */
 class Grass {
-    constructor(x, y, ) {
+    constructor(x, y ) {
         this.x = x;
         this.y = y;
         this.multiply = random(5,10);
