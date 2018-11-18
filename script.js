@@ -569,12 +569,12 @@ for(var i = 0; i < 40; i++){
 */
 // project
 var matrix = [];
-var row = 70, column = 70;
+var row = 100, column = 100;
 
 
 
 console.log(matrix);
-var side = 10;
+var side = 9;
 var grassArr = [];
 var grassEater = [];
 var gishatich = [];
@@ -690,7 +690,7 @@ function draw() {
 }
 function drawmatrix() {
     var p = document.getElementById("p");
-
+    
     var aui = [0, 255];
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[y].length; x++) {
@@ -726,8 +726,13 @@ function drawmatrix() {
                 else if (matrix[y][x] == 5) {
                     fill("white");
                 }
+                //image 
+                
                 p.innerText = "ՁՄԵՌ";
-
+                document.getElementById("p").style.color = "#66ffff";
+        
+               
+                
 
                 rect(x * side, y * side, side, side);
             }
@@ -760,6 +765,12 @@ function drawmatrix() {
                     fill("white");
                 }
                 p.innerText = "ԳԱՐՈՒՆ";
+                document.getElementById("p").style.color = "#00cc00";              
+ 
+                    
+                 
+                
+               
 
                 rect(x * side, y * side, side, side);
 
@@ -793,6 +804,7 @@ function drawmatrix() {
                     fill("white");
                 }
                 p.innerText = "ԱՄԱՌ";
+                document.getElementById("p").style.color = "#ffff00";
 
                 rect(x * side, y * side, side, side);
 
@@ -827,6 +839,7 @@ function drawmatrix() {
                     fill("white");
                 }
                 p.innerText = "ԱՇՈՒՆ";
+                document.getElementById("p").style.color = "#ff9900";
 
                 rect(x * side, y * side, side, side);
          
@@ -842,4 +855,7 @@ function drawmatrix() {
 
 
 
-
+/*
+var img = document.getElementById("myimage");
+img.src = ""
+*/
