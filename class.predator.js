@@ -73,7 +73,7 @@ class Gishatich extends Base {
         for (var c in gishatich) {
             if (gishatich[c].x == this.x && gishatich[c].y == this.y) {
                 gishatich.splice(c, 1);
-                console.log(gishatich.length);
+                //console.log(gishatich.length);
                 break;
             }
         }

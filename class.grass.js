@@ -2,8 +2,11 @@ class Grass extends Base {
     
     
     
-    mult() {
-        this.multiply++
+    mult(x) {
+
+        this.multiply+=x;
+        
+        
         var emptyCells = this.chooseCell(0); // array
 
         var randomCell = random(emptyCells); // [ x, y ]
@@ -20,6 +23,8 @@ class Grass extends Base {
             this.multiply = 0;
         }
     }
+
+
 }
 
 

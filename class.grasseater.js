@@ -73,7 +73,7 @@ class GrassEater extends Base {
         for (var c in grassEater) {
             if (grassEater[c].x == this.x && grassEater[c].y == this.y) {
                 grassEater.splice(c, 1);
-                console.log(grassEater.length);
+               // console.log(grassEater.length);
                 break;
             }
         }
