@@ -1,7 +1,8 @@
 class GrassEater extends Base {
     constructor(x, y){
     super(x, y);
-    this.energy = 8;
+    this.energy = 20;
+    this.gender = Math.round(Math.random());
 
 
     }
@@ -38,6 +39,10 @@ class GrassEater extends Base {
         if (this.energy < 1) {
             this.die();
         }
+        else if (this.energy > 9) {
+          
+            this.bazmanal();
+        }
     }
 
     eat() {
@@ -60,6 +65,7 @@ class GrassEater extends Base {
             }
 
             if (this.energy > 9) {
+                //console.log(55);
                 this.bazmanal();
             }
         }
@@ -81,14 +87,35 @@ class GrassEater extends Base {
 
     bazmanal() {
         this.getNewCordinates();
+        if (this.gender == 0) {
+            var g = 1
+        }
+        else {
+            var g = 0
+        }
+        var voshxarner = this.chooseCell1(2);
+        for (var i in voshxarner) {
+            for (var l in grassEater) {
+                if(grassEater[l].y == voshxarner[i][1] && grassEater[l].x == voshxarner[i][0]){
+                    if (grassEater[l].gender == g) {
+                        var bex = []
+                        bex.push(grassEater[l])
+                        for (var k in bex) {
+                            if (bex[k].energy >= 5) {
 
-        var vandak = random(this.chooseCell1(0));
+                                var vandak = random(this.chooseCell1(0));
 
-        if (vandak) {
-            var norgrasseater = new GrassEater(vandak[0], vandak[1]);
-            grassEater.push(norgrasseater);
-            matrix[vandak[1]][vandak[0]] = 2;
-            this.energy = 3;
+                                if (vandak) {
+                                    var norgrasseater = new GrassEater(vandak[0], vandak[1]);
+                                    grassEater.push(norgrasseater);
+                                    matrix[vandak[1]][vandak[0]] = 2;
+                                    this.energy = 8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
